@@ -110,3 +110,45 @@ h3,pre{
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;   
 }
+.slide{
+    height: 30rem;
+    width: 53rem;
+    border-style: solid;
+    border-width: 3px;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: #fcfcfc;
+}
+.slide-content{
+    text-align: center;
+}
+h3{
+    color: #000;
+    font-size: 1.4rem;
+}
+.img{
+    height: 15rem;
+    width: 15rem;
+}
+#music{
+    height: 4rem;
+    width: 10rem;
+    border-radius: 3rem;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #000;
+    position:fixed;
+}
+.audio-btn {
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid #913F4A;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: #fcfcfc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }

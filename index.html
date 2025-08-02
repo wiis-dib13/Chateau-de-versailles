@@ -20,7 +20,7 @@
                <li><a href ="#Accueil"> Accueil</a></li>
                 <li> <a href ="#Plan"> Plan</a></li>
                 <li> <a href ="#Galerie"> Galerie</a></li>
-                <li> <a href ="#"> A propos de nous</a></li>
+                <li> <a href ="#propos"> A propos de nous</a></li>
                 <li class="search">
                     <a href ="#">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -50,12 +50,11 @@
    <h1>Plan du chateau</h1>
           <div class="plan">
             <div class="navigation">
-              <button class="bu">Entrer</button>
-               <button class="bu">Origines</button>
-                <button class="bu">Louis XIV</button>
-                <button class="bu">Galerie</button>
-                <button class="bu">Marie-Antoinette</button>
-                <button class="bu">Revolution</button>
+<button class="bu" data-target="slide1">Origines</button>
+<button class="bu" data-target="slide2">Louis XIV</button>
+<button class="bu" data-target="slide3">Galerie</button>
+<button class="bu" data-target="slide4">Marie-Antoinette</button>
+<button class="bu" data-target="slide5">Révolution</button>
             </div>
           </div>
 </div>
@@ -138,12 +137,41 @@
 </section>
 </div>
 
-<div class="audio-btn">🎵
-<audio controls id="music">
-<source src="assets/classical.mp3" type="audio/mpeg">
-</audio>
+<div class="audio-btn">
+    <button id="audioBtn" onclick="toggleAudio()">🎵</button>
+    <audio id="music" loop>
+        <source src="assets/classical.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'audio HTML5.
+    </audio>
 </div>
 
+<div id="propos">
+    <footer class="fo">
+        <nav>
+            <h3 style="font-size: 1rem;">dibwissem7@gmail.com</h3>
+            <h3 style="font-size: 1rem; margin-right: 3rem;" >Github : wiis-dib13</h3>
+        </nav>
+        <h2 style="text-align: center;">contacter nous</h2>
+        <div id="mess">
+        <label for="nom" >nom:</label>
+        <input type="text" id="nom" required >
+
+        <label for="email">Email:</label>
+         <input type="email" id="email" required> 
+         
+         <label for="phone">Tel:</label>
+         <input type="tel" id="phone" required >
+         <label for="texte">Votre message :</label>
+         <textarea id="texte"></textarea>
+         <button class="bu" style="width: 10rem; height: 3rem; margin: auto;">envoyer</button>
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>

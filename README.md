@@ -9,10 +9,10 @@ To Tell the story of the castle in an interactive way, with each slide telling a
 used html/css and js 
 
 # features 
-Classical background music
-Navigation like a "castle map" where each room is clickable
-Integrate a historical timeline or key figures (Louis XIV, Marie-Antoinette, etc.)
-
+-Classical background music
+-Navigation like a "castle map" where each room is clickable
+-Integrate a historical timeline or key figures (Louis XIV, Marie-Antoinette, etc.)
+-only in french i'll work in an english version
 
 # interface 
 ![github](https://github.com/user-attachments/assets/bf1be954-760b-4bd7-af66-2a674e71a36c)

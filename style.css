@@ -118,6 +118,11 @@ h3,pre{
     margin: auto;
     margin-top: 3rem;
     background-color: #fcfcfc;
+    display: none;
+}
+
+.slide.active {
+  display: block; /* Affiche uniquement celle qui a la classe active */
 }
 .slide-content{
     text-align: center;
@@ -152,3 +157,19 @@ h3{
             align-items: center;
             justify-content: center;
         }
+.fo{
+    width: 100%;
+    border-top: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+#mess {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* espace entre les champs */
+  padding: 2rem;
+  width: 300px;
+  margin: auto;
+  font-weight: bold;
+}
+
+

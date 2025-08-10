@@ -1,179 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Château de Versailles</title>
 
-    <title>Chateau de versaille</title>
 </head>
 <body>
     <header>
         <nav>
-            <p>Chateau de versailles</p>
-            <ul>
-            
-               <li><a href ="#Accueil"> Accueil</a></li>
-                <li> <a href ="#Plan"> Plan</a></li>
-                <li> <a href ="#Galerie"> Galerie</a></li>
-                <li> <a href ="#propos"> A propos de nous</a></li>
+            <a href="#Accueil" class="logo">Château de Versailles </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#Accueil">Accueil</a></li>
+                <li><a href="#Plan">Histoire</a></li>
+                <li><a href="#Galerie">Galerie</a></li>
+                <li><a href="#propos">Contact</a></li>
                 <li class="search">
-                    <a href ="#">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </li>
             </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
-<div id="Accueil">
-    <h1>Explorer notre histoire</h1>
-    <h3>Découvrez l'histoire du château
-         à travers des visuels animés,
-          de la musique classique
-           et une navigation basée sur une carte permettant aux visiteurs d'explorer les différentes salles.
-    </h3>
-    <button id="commencer">commencer</button>
-    <div id="image">.</div>
-    <pre style="font-weight: bold; font-family:Playwrite AU QLD";>De simple pavillon de chasse 
-        à résidence royale, 
-        puis musée national,
-         Versailles raconte l'histoire de la France
-          à travers
-          ses murs dorés et ses jardins somptueux.</pre>
-</div>
 
-<div id="Plan">
-   <h1>Plan du chateau</h1>
-          <div class="plan">
-            <div class="navigation">
-<button class="bu" data-target="slide1">Origines</button>
-<button class="bu" data-target="slide2">Louis XIV</button>
-<button class="bu" data-target="slide3">Galerie</button>
-<button class="bu" data-target="slide4">Marie-Antoinette</button>
-<button class="bu" data-target="slide5">Révolution</button>
+    <section id="Accueil">
+        <div class="hero-content">
+            <h1>Explorez Notre Histoire</h1>
+            <p>Découvrez l'histoire du château à travers des visuels animés, de la musique classique et une navigation basée sur une carte permettant aux visiteurs d'explorer les différentes salles.</p>
+            
+            <div class="hero-quote">
+                "De simple pavillon de chasse à résidence royale, puis musée national, Versailles raconte l'histoire de la France à travers ses murs dorés et ses jardins somptueux."
             </div>
-          </div>
-</div>
-<div id="Galerie">
-<section class="slide" id="slide1">
-    <div class="slide-content">
-        <h2>Les Origines (1623-1651)</h2>
-    <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">Tout commence par un simple
-         pavillon de chasse construit 
-         par Louis XIII en 1623. 
-         Ce petit château de briques 
-         et de pierres deviendra le cœur du plus grandiose palais d'Europe.
-        </pre>
-        <h3>👑 Louis XIII</h3>
-        <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">Le roi chasseur qui tomba amoureux 
-        de ce domaine marécageux. Il y fit construire un modeste château
-              pour ses parties de chasse, posant sans le savoir les fondations d'un mythe.</pre>
-    </div>
-</section>
+            
+            <button class="cta-button" onclick="document.getElementById('Plan').scrollIntoView()">
+                Commencer la Visite
+            </button>
+        </div>
+        
+        <div class="hero-image"></div>
+    </section>
 
-<section class="slide" id="slide2">
-    <div class="slide-content">
-        <h2>L'Âge de Louis XIV (1661-1715)</h2>
-    <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">Le Roi-Soleil transforme 
-        Versailles en symbole de sa puissance. 
-        Jules Hardouin-Mansart et André Le Nôtre créent 
-        un ensemble architectural sans égal, 
-        théâtre de l'étiquette royale.</pre>
-        <h3>☀️ Louis XIV - Le Roi-Soleil</h3>
-        <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">"L'État, c'est moi" - Le monarque absolu qui fit de Versailles 
-              le centre du pouvoir européen. 
-        Sous son règne, le château devient le modèle de toutes les cours d'Europe.</pre>
-    </div>
-</section>
+    <section id="Plan">
+        <h2 class="section-title">Histoire du Château</h2>
+        
+        <div class="navigation-grid">
+            <div class="nav-card active" onclick="showSlide('slide1', this)">
+                <h3>🏰 Origines</h3>
+                <p>1623-1651</p>
+            </div>
+            <div class="nav-card" onclick="showSlide('slide2', this)">
+                <h3>☀️ Louis XIV</h3>
+                <p>1661-1715</p>
+            </div>
+            <div class="nav-card" onclick="showSlide('slide3', this)">
+                <h3>✨ Galerie</h3>
+                <p>des Glaces</p>
+            </div>
+            <div class="nav-card" onclick="showSlide('slide4', this)">
+                <h3>👑 Marie-Antoinette</h3>
+                <p>1770-1792</p>
+            </div>
+            <div class="nav-card" onclick="showSlide('slide5', this)">
+                <h3>🏛️ Révolution</h3>
+                <p>1789-1799</p>
+            </div>
+        </div>
+    </section>
 
-<section class="slide" id="slide3">
-    <div class="slide-content">
-        <h2>La Galerie des Glaces</h2>
-        <img src="assets/img1.jpg" class="img" alt="cc">
-        <img src="assets/img2.jpg" class="img" alt="cc">
-        <img src="assets/img3.jpg" class="img" alt="cc">
-    <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">
-    Chef-d'œuvre de l'art décoratif français, 
-    cette galerie de 73 mètres de long éblouit par ses 357 miroirs
-     qui reflètent la lumière des jardins. 
-     Elle symbolise le faste et l'art de vivre français.</pre>
-    </div>
-</section>
+    <section id="Galerie">
+        <div class="slide active" id="slide1">
+            <div class="slide-content">
+                <h2>Les Origines (1623-1651)</h2>
+                <p>Tout commence par un simple pavillon de chasse construit par Louis XIII en 1623. Ce petit château de briques et de pierres deviendra le cœur du plus grandiose palais d'Europe.</p>
+                
+                <h3>👑 Louis XIII - Le Roi Chasseur</h3>
+                <p>Le roi chasseur qui tomba amoureux de ce domaine marécageux. Il y fit construire un modeste château pour ses parties de chasse, posant sans le savoir les fondations d'un mythe.</p>
+            </div>
+        </div>
 
-<section class="slide" id="slide4">
-    <div class="slide-content">
-        <h2>L'Époque de Marie-Antoinette (1770-1792)</h2>
-        <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">
-        La dernière reine de France apporte un nouveau raffinement à Versailles.
-         Elle crée le Petit Trianon et le Hameau 
-         de la Reine, refuges d'intimité dans l'immensité du protocole royal.
-        </pre>
-        <img src="assets/img4.jpg" class="img" alt="">
-    </div>
-</section>
+        <div class="slide" id="slide2">
+            <div class="slide-content">
+                <h2>L'Âge de Louis XIV (1661-1715)</h2>
+                <p>Le Roi-Soleil transforme Versailles en symbole de sa puissance. Jules Hardouin-Mansart et André Le Nôtre créent un ensemble architectural sans égal, théâtre de l'étiquette royale.</p>
+                
+                <h3>☀️ Louis XIV - Le Roi-Soleil</h3>
+                <p>"L'État, c'est moi" - Le monarque absolu qui fit de Versailles le centre du pouvoir européen. Sous son règne, le château devient le modèle de toutes les cours d'Europe.</p>
+            </div>
+        </div>
 
-<section class="slide" id="slide5">
-    <div class="slide-content">
-    <h2>La Révolution (1789-1799)</h2>
-    <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">
-       Le 5 octobre 1789, 
-       la foule parisienne force
-        la famille royale à quitter Versailles pour Paris. 
-        C'est la fin de l'Ancien Régime 
-        et le début d'une nouvelle ère pour le château.
-    </pre>
-     <h3>🏛️ La République</h3>
-    <pre style="font-family: Playwrite AU ; font-size: 1.5rem;">
-     Versailles devient musée en 1837 sous Louis-Philippe, 
-     "dédié à toutes les gloires de la France".
-      Le château trouve ainsi une nouvelle vocation :
-       préserver et transmettre l'histoire française
-    </pre>
-    </div>
-</section>
-</div>
+        <div class="slide" id="slide3">
+            <div class="slide-content">
+                <h2>La Galerie des Glaces</h2>
+                <div class="image-gallery">
+                    <div style="background: linear-gradient(45deg, #D4AF37, #F7DC6F); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border-radius: 10px;">
+                        <img src="assets/img1.jpg">
+                    </div>
+                    <div style="background: linear-gradient(45deg, #8B4513, #D2B48C); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border-radius: 10px;">
+                          <img src="assets/img2.jpg">
+                    </div>
+                    <div style="background: linear-gradient(45deg, #C41E3A, #FFB6C1); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border-radius: 10px;">
+                          <img src="assets/img3.jpg">
+                    </div>
+                </div>
+                <p>Chef-d'œuvre de l'art décoratif français, cette galerie de 73 mètres de long éblouit par ses 357 miroirs qui reflètent la lumière des jardins. Elle symbolise le faste et l'art de vivre français.</p>
+            </div>
+        </div>
 
-<div class="audio-btn">
-    <button id="audioBtn" onclick="toggleAudio()">🎵</button>
-    <audio id="music" loop>
+        <div class="slide" id="slide4">
+            <div class="slide-content">
+                <h2>L'Époque de Marie-Antoinette (1770-1792)</h2>
+                <p>La dernière reine de France apporte un nouveau raffinement à Versailles. Elle crée le Petit Trianon et le Hameau de la Reine, refuges d'intimité dans l'immensité du protocole royal.</p>
+                <div class="image-gallery">
+                    <div style="background: linear-gradient(45deg, #FFB6C1, #FFC0CB); height: 200px; display: flex; align-items: center; justify-content: center; color: #8B4513; font-weight: bold; border-radius: 10px;">
+                        <img src="assets/img4.jpg" alt="" style="height: 250px;  object-fit: cover; object-position: bottom;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide5">
+            <div class="slide-content">
+                <h2>La Révolution (1789-1799)</h2>
+                <p>Le 5 octobre 1789, la foule parisienne force la famille royale à quitter Versailles pour Paris. C'est la fin de l'Ancien Régime et le début d'une nouvelle ère pour le château.</p>
+                
+                <h3>🏛️ La République</h3>
+                <p>Versailles devient musée en 1837 sous Louis-Philippe, "dédié à toutes les gloires de la France". Le château trouve ainsi une nouvelle vocation : préserver et transmettre l'histoire française.</p>
+            </div>
+        </div>
+    </section>
+
+    <button class="audio-btn" onclick="toggleAudio()">
+        <i class="fa-solid fa-music"></i>
+         <audio id="music" loop>
         <source src="assets/classical.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'audio HTML5.
     </audio>
-</div>
+    </button>
 
-<div id="propos">
-    <footer class="fo">
-        <nav>
-            <i class="fa-solid fa-envelope"></i>
-            <h3 style="font-size: 1rem; position: relative; right: 18rem;">dibwissem7@gmail.com</h3>
-            <i class="fa-brands fa-github"></i>
-            <h3 style="font-size: 1rem; margin-right: 3rem;" >Github : wiis-dib13</h3>
-        </nav>
-        <h2 style="text-align: center;">contacter nous</h2>
-        <div id="mess">
-        <label for="nom" >nom:</label>
-        <input type="text" id="nom" required >
-
-        <label for="email">Email:</label>
-         <input type="email" id="email" required> 
-         
-         <label for="phone">Tel:</label>
-         <input type="tel" id="phone" required >
-         <label for="texte">Votre message :</label>
-         <textarea id="texte"></textarea>
-         <button class="bu" style="width: 10rem; height: 3rem; margin: auto;">envoyer</button>
+    <section id="propos">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contactez-nous</h3>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>dibwissem7@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Github : wiis-dib13</span>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" placeholder="Votre nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="votre@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" placeholder="Votre téléphone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="texte">Votre message</label>
+                    <textarea id="texte" placeholder="Votre message..."></textarea>
+                </div>
+                
+                <button class="cta-button" style="width: 100%; margin-top: 1rem;">
+                    Envoyer
+                </button>
+            </div>
         </div>
-
-    </footer>
-
-</div>
-
-
+    </section>
 <script src="script.js"></script>
+  
 
 </body>
 </html>

@@ -15,5 +15,5 @@ used html/css and js
 -only in french i'll work in an english version
 
 # interface 
-![github](https://github.com/user-attachments/assets/bf1be954-760b-4bd7-af66-2a674e71a36c)
-![github1](https://github.com/user-attachments/assets/21f17d4c-ec7d-4b35-9f7c-f2de81bb652f)
+
+![hm](https://github.com/user-attachments/assets/5cd42172-0301-4c92-82b0-d0ff21dddcdb)
